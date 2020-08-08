@@ -105,19 +105,26 @@ roslaunch handy_experiment pickplace_pddl.launch
 ```
 roslaunch freenect_launch freenect.launch depth_registration:=true
 ```
-2.3. run PDDL, spoon or knife into bowl
+
+2.3. run PDDL, object detector (keep running it for 2.4 2.5 2.6 2.7)
+```
+cd $AffordanceNet_ROOT/scripts
+python kinect_pddl_UMD_firstAffordance_objectness_contain_objdetection_sub.py
+```
+
+2.4. run PDDL, spoon or knife into bowl
 ```
 cd $AffordanceNet_ROOT/scripts
 python kinect_pddl_UMD_firstAffordance_objectness_contain_objdetection_spoon_or_knife_in_bowl.py
 ```
 
-2.4. run PDDL, spoon or trowl scoop coffee
+2.5. run PDDL, spoon or trowl scoop coffee
 ```
 cd $AffordanceNet_ROOT/scripts
 python kinect_pddl_UMD_firstAffordance_objectness_contain_objdetection_spoon_or_knife_in_bowl.py
 ```
 
-2.5. run PDDL, spoon to plate to bowl
+2.6. run PDDL, spoon to plate to bowl
 ```
 cd $AffordanceNet_ROOT/scripts
 python kinect_pddl_UMD_firstAffordance_objectness_contain_objdetection_spoon_to_plate_to_bowl.py
@@ -127,7 +134,7 @@ and
 python kinect_pddl_UMD_firstAffordance_objectness_contain_objdetection_spoon_to_plate_to_bowl2.py
 ```
 
-2.6. run PDDL, objects into containers
+2.7. run PDDL, objects into containers
 ```
 cd $AffordanceNet_ROOT/scripts
 python kinect_pddl_UMD_firstAffordance_objectness_contain_objdetection_objects_into_containers.py
