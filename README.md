@@ -20,47 +20,46 @@ This is the implementation of our submission 'Improving Affordance Detection on 
 
 ### Demo
 
-1. Clone the AffordanceNet_DA repository into your `$AffordanceNet_Novel_ROOT` folder
+1. Clone the AffordanceNet_Context repository into your `$AffordanceNet_Context_ROOT` folder
 ```
-git clone https://github.com/ivalab/affordanceNet_Novel.git
-cd affordanceNet_Novel
+git clone https://github.com/ivalab/affordanceNet_Context.git
+cd affordanceNet_Context
 ```
 
 2. Export pycaffe path
 ```
-`export PYTHONPATH=$AffordanceNet_Novel_ROOT/caffe-affordance-net/python:$PYTHONPATH`
+`export PYTHONPATH=$AffordanceNet_Context_ROOT/caffe-affordance-net/python:$PYTHONPATH`
 ```
 
 2. Build Cython modules
 ```
-cd $AffordanceNet_Novel_ROOT/lib
+cd $AffordanceNet_Context_ROOT/lib
 make clean
 make
 cd ..
 ```
 
 4. Download pretrained models
-    - trained model for DEMO on [dropbox](https://www.dropbox.com/s/34v4pps8ug6s7x1/vgg16_faster_rcnn_iter_151000.caffemodel?dl=0) 
+    - trained model for DEMO on [dropbox](https://www.dropbox.com/s/4wai7v9j6jp7pge/vgg16_faster_rcnn_iter_110000_pam_7attribute.caffemodel?dl=0) 
     - put under `./pretrained/`
 
 5. Demo
 ```
-cd $AffordanceNet_Novel_ROOT/tools
-python demo_img_kldivergence.py
+cd $AffordanceNet_Context_ROOT/tools
+python demo_img.py
 ```
-you can adjust `RANK` to be 1 or 2 or 3 
 	
 ### Training
-1. We train AffordanceNet_Novel on UMD dataset
+1. We train AffordanceNet_Context on UMD dataset
 	- You will need synthetic data and real data in Pascal dataset format. 
-	- For your convinience, we did it for you. Just download this file on [dropbox](https://www.dropbox.com/s/zfgn3jo8b2zid7a/VOCdevkit2012.tar.gz?dl=0) and extract it into your `$AffordanceNet_Novel_ROOT/data` folder; And download this [Annotations](https://www.dropbox.com/home/gt/IVAlab/Deep_Learning_Project/data/affordanceNovel/Annotations_objectness) containing xml with `objectness` instead of all objects to replace `$AffordanceNet_Novel_ROOT/data/VOCdevkit2012/VOC2012/Annotations`; And download this file on [dropbox](https://www.dropbox.com/s/zfgn3jo8b2zid7a/VOCdevkit2012.tar.gz?dl=0) and extract it into your `$AffordanceNet_Novel_ROOT/data/cache` folder; Make sure you use the category split on [dropbox](https://www.dropbox.com/sh/bahp8aci3ejpytx/AAAlLD1L31XVuOSPzffNJkHya?dl=0) and extract it into your `$AffordanceNet_Novel_ROOT/data/VOCdevkit2012/VOC2012/ImageSets/Main` folder
+	- For your convinience, we did it for you. Just download this file on [dropbox](https://www.dropbox.com/s/zfgn3jo8b2zid7a/VOCdevkit2012.tar.gz?dl=0) and extract it into your `$AffordanceNet_Context_ROOT/data` folder; And download this [Annotations](https://www.dropbox.com/home/gt/IVAlab/Deep_Learning_Project/data/affordanceNovel/Annotations_objectness) containing xml with `objectness` instead of all objects to replace `$AffordanceNet_Context_ROOT/data/VOCdevkit2012/VOC2012/Annotations`; And download this file on [dropbox](https://www.dropbox.com/s/zfgn3jo8b2zid7a/VOCdevkit2012.tar.gz?dl=0) and extract it into your `$AffordanceNet_Context_ROOT/data/cache` folder; Make sure you use the category split on [dropbox](https://www.dropbox.com/sh/bahp8aci3ejpytx/AAAlLD1L31XVuOSPzffNJkHya?dl=0) and extract it into your `$AffordanceNet_Context_ROOT/data/VOCdevkit2012/VOC2012/ImageSets/Main` folder
 	- You will need the VGG-16 weights pretrained on imagenet. For your convinience, please find it [here](https://www.dropbox.com/s/i4kv0vgn078d1jb/VGG16.v2.caffemodel?dl=0)
-	- Put the weight into `$AffordanceNet_Novel_ROOT/imagenet_models`
+	- Put the weight into `$AffordanceNet_Context_ROOT/imagenet_models`
 	- If you want novel instance split, please find it [here](https://www.dropbox.com/sh/ya5n61prbc8ftum/AABABu3mqQW438BldvVUYmwoa?dl=0)
 
-2. Train AffordanceNet_Novel:
+2. Train AffordanceNet_Context:
 ```
-cd $AffordanceNet_ROOT
+cd $AffordanceNet_Context_ROOT
 ./experiments/scripts/faster_rcnn_end2end.sh 0 VGG16 pascal_voc
 ```
 
