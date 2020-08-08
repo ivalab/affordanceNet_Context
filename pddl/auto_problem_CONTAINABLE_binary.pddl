@@ -1,0 +1,5 @@
+(define (problem handy_vision)
+    (:domain handy)
+    (:objects arm tool target )
+    (:init (free arm) (CONTAINABLE tool) (GRASPABLE target) )
+    (:goal (and (contains tool target))))

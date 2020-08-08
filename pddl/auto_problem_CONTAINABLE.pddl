@@ -1,0 +1,5 @@
+(define (problem handy_vision)
+    (:domain handy)
+    (:objects arm bowl plate )
+    (:init (free arm) (CONTAINABLE bowl) (GRASPABLE plate) (CONTAINABLE plate) (SUPPORTABLE plate) )
+    (:goal (and (contains bowl knife))))
