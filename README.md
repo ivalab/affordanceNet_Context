@@ -66,6 +66,7 @@ cd $AffordanceNet_Context_ROOT
 
 ### Physical Manipulation with affordance
 Trained model for DEMO on [dropbox](https://www.dropbox.com/s/2pymk87dzu1io24/vgg16_faster_rcnn_iter.caffemodel?dl=0) 
+
 1.1. Install [Freenect](https://github.com/OpenKinect/libfreenect)
 
 
