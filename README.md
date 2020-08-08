@@ -76,8 +76,8 @@ cd $AffordanceNet_Context_ROOT
 cd $AffordanceNet_ROOT/scripts
 python demo_img_socket_noprocess_firstAff_kinect.py
 ```
-You should see the output to be detected point in 3D 
-Specify `affordance_id` for your need.  
+- You should see the output to be detected point in 3D 
+- Specify `affordance_id` for your need.  
 ```
 affordance_id = 6 # 1: grasp 2:cut 3: scoop 4: contain 5:pound 6: support 7:wrap-grasp
 ```
