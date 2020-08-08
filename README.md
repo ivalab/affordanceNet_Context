@@ -1,24 +1,9 @@
-# AffordanceNet_DA
-This is the implementation of our RA-L work 'Toward Affordance Detection and Ranking on Novel Objects for Real-world Robotic Manipulation'. This paper presents a framework to detect and rank affordances of novel objects to assist with robotic manipulation tasks. The original arxiv paper can be found [here](https://ieeexplore.ieee.org/abstract/document/8770077).
+# AffordanceNet_Context
+This is the implementation of our submission 'Improving Affordance Detection on Novel Objects with Regional Attention toward Real-world Robotic Manipulation'. This paper presents a framework to apply attention and attribute on region-based architecture for affordance detection on novel objects to assist with robotic manipulation tasks. The original arxiv paper can be found [here](https://arxiv.org/pdf/1909.05770.pdf).
 
 <p align="center">
-<img src="https://github.com/ivalab/affordanceNet_Novel/blob/master/fig/concept.png" alt="drawing" width="300"/>
+<img src="https://github.com/ivalab/affordanceNet_Context/blob/master/fig/concept_plot_pddl.png" alt="drawing" width="300"/>
 </p>
-
-If you find it helpful for your research, please consider citing:
-
-    @inproceedings{chu2019toward,
-      title = {Learning Affordance Segmentation for Real-world Robotic Manipulation via Synthetic Images},
-      author = {Chu, Fu-Jen and Xu, Ruinian and Seguin, Landan and Vela, Patricio A},
-      journal = {IEEE Robotics and Automation Letters},
-      year = {2019},
-      volume={4},
-      number={4},
-      pages={4070--4077},    
-      DOI = {10.1109/LRA.2019.2930364},
-      ISSN = {4070-4077},
-      month = {Oct}
-    }
 
 ------------------------------------
 
