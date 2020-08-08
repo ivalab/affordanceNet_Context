@@ -64,6 +64,21 @@ cd $AffordanceNet_Context_ROOT
 ```
 
 
+### Physical Manipulation with affordance
+Trained model for DEMO on [dropbox](https://www.dropbox.com/s/2pymk87dzu1io24/vgg16_faster_rcnn_iter.caffemodel?dl=0) 
+1.1. Install [Freenect](https://github.com/OpenKinect/libfreenect)
+
+
+2.1  Run detection
+```
+cd $AffordanceNet_ROOT/scripts
+python demo_img_socket_noprocess_firstAff_kinect.py
+```
+You should see the output to be detected point in 3D 
+Specify `affordance_id` for your need.  
+```
+affordance_id = 6 # 1: grasp 2:cut 3: scoop 4: contain 5:pound 6: support 7:wrap-grasp
+```
 
 ### Physical Manipulation with PDDL
 1.1. Install [Fast-Downward](https://github.com/danfis/fast-downward) for PDDL.
@@ -88,11 +103,38 @@ roslaunch handy_experiment pickplace_pddl.launch
 ```
 roslaunch freenect_launch freenect.launch depth_registration:=true
 ```
-2.3. run PDDL
+2.3. run PDDL, spoon or knife into bowl
 ```
 cd $AffordanceNet_ROOT/scripts
-python kinect_pddl_UMD_firstAffordance_objectness_nonprimary.py
+python kinect_pddl_UMD_firstAffordance_objectness_contain_objdetection_spoon_or_knife_in_bowl.py
 ```
+
+2.4. run PDDL, spoon or trowl scoop coffee
+```
+cd $AffordanceNet_ROOT/scripts
+python kinect_pddl_UMD_firstAffordance_objectness_contain_objdetection_spoon_or_knife_in_bowl.py
+```
+
+2.5. run PDDL, spoon to plate to bowl
+```
+cd $AffordanceNet_ROOT/scripts
+python kinect_pddl_UMD_firstAffordance_objectness_contain_objdetection_spoon_to_plate_to_bowl.py
+```
+and 
+```
+python kinect_pddl_UMD_firstAffordance_objectness_contain_objdetection_spoon_to_plate_to_bowl2.py
+```
+
+2.6. run PDDL, objects into containers
+```
+cd $AffordanceNet_ROOT/scripts
+python kinect_pddl_UMD_firstAffordance_objectness_contain_objdetection_objects_into_containers.py
+```
+and 
+```
+python kinect_pddl_UMD_firstAffordance_objectness_contain_objdetection_objects_into_containers2.py
+```
+
 
 Note you might need to:
 
@@ -116,6 +158,8 @@ obj_pose_3D.position.z = round(coords_3D[2], 2) - 0.13
 ```
 
 (4) modify the `args.sim` path for debug mode
+
+
 
 
 ### License
