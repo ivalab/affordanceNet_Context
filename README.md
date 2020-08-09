@@ -93,7 +93,7 @@ affordance_id = 6 # 1: grasp 2:cut 3: scoop 4: contain 5:pound 6: support 7:wrap
 
 1.5. Compile [handy_experiment](https://github.com/ivaROS/handy_experiment) in your ros workspace `handy_ws` for experiment codebase.
 
-1.6. Train your own object detector (try [this](https://github.com/endernewton/tf-faster-rcnn)). [model](kinect_pddl_UMD_firstAffordance_objectness_contain_objdetection_sub.py), [weights]()
+1.6. Train your own object detector (try [this](https://github.com/endernewton/tf-faster-rcnn)). [model](https://drive.google.com/file/d/1ji1c554ZFmGMP6028NKTTSjjDOokeAgd/view?usp=sharing), [weights](https://drive.google.com/file/d/1KZ2e56VXnIlbH4YWR_EaH7TFHVA3wJMa/view?usp=sharing)
 
 
 2.1. run Handy (our robot, you may check our codebase and adjust yours)
